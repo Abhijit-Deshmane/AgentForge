@@ -3,17 +3,19 @@ import { createRoot } from "@opentui/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { RootLayout } from "./layouts/root-layout";
 import { Home } from "./screens/home";
+import { NewSession } from "./screens/new-session";
+import { Session } from "./screens/session";
 
 const router = createMemoryRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
-      { index: true, element: <Home/> },
-      { path: "sessions/new", element: <box><text>sessions/new</text></box> },
-      { path: "sessions/:id", element: <box><text>sessions/:id</text></box> },
-    ],
-  },
+      { index: true, element: <Home /> },
+      { path: "sessions/new", element: <NewSession /> },
+      { path: "sessions/:id", element: <Session /> },
+    ]
+  }
 ]);
 
 function App() {
