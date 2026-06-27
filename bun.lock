@@ -16,7 +16,7 @@
         "react-router": "^7.17.0",
       },
       "devDependencies": {
-        "@nightcode/server": "workspace:*",
+        "@agentforge/server": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -36,8 +36,10 @@
       },
     },
     "packages/server": {
-      "name": "@nightcode/server",
+      "name": "@agentforge/server",
       "dependencies": {
+        "@agentforge/database": "workspace:*",
+        "@agentforge/shared": "workspace:*",
         "@hono/zod-validator": "^0.8.0",
         "dotenv": "^17.4.2",
         "hono": "4.12.12",
@@ -56,6 +58,8 @@
 
     "@agentforge/database": ["@agentforge/database@workspace:packages/database"],
 
+    "@agentforge/server": ["@agentforge/server@workspace:packages/server"],
+
     "@agentforge/shared": ["@agentforge/shared@workspace:packages/shared"],
 
     "@electric-sql/pglite": ["@electric-sql/pglite@0.4.1", "", {}, "sha512-mZ9NzzUSYPOCnxHH1oAHPRzoMFJHY472raDKwXl/+6oPbpdJ7g8LsCN4FSaIIfkiCKHhb3iF/Zqo3NYxaIhU7Q=="],
@@ -69,8 +73,6 @@
     "@hono/zod-validator": ["@hono/zod-validator@0.8.0", "", { "peerDependencies": { "hono": ">=4.10.0", "zod": "^3.25.0 || ^4.0.0" } }, "sha512-5uS4S1/LKtZQYvD4BtpPUFkOv8d1wNxHHrChm26buMiEYc1FrHWvDUaKVBwkiVtvSExHSpLGDvcnpI2Copyj9w=="],
 
     "@kurkle/color": ["@kurkle/color@0.3.4", "", {}, "sha512-M5UknZPHRu3DEDWoipU6sE8PdkZ6Z/S+v4dD+Ke8IaNlpdSQah50lz1KtcFBa2vsdOnwbbnxJwVM4wty6udA5w=="],
-
-    "@nightcode/server": ["@nightcode/server@workspace:packages/server"],
 
     "@opentui/core": ["@opentui/core@0.3.1", "", { "dependencies": { "bun-ffi-structs": "0.2.2", "diff": "9.0.0", "marked": "17.0.1", "string-width": "7.2.0", "strip-ansi": "7.1.2", "yoga-layout": "3.2.1" }, "optionalDependencies": { "@opentui/core-darwin-arm64": "0.3.1", "@opentui/core-darwin-x64": "0.3.1", "@opentui/core-linux-arm64": "0.3.1", "@opentui/core-linux-x64": "0.3.1", "@opentui/core-win32-arm64": "0.3.1", "@opentui/core-win32-x64": "0.3.1" }, "peerDependencies": { "web-tree-sitter": "0.25.10" } }, "sha512-kQFSsSCgtlasSqTigCgKmM67xaquGvTg+vwimDnFSZtcBEt4E3dz7qLrbeh5FVvTA+RMbwe+Bozq03PW+SgjXw=="],
 
