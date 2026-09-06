@@ -9,19 +9,21 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@agentforge/server": "workspace:*"
-    
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
+    "@agentforge/database": "workspace:*",
     "@agentforge/shared": "workspace:*",
     "@opentui/core": "^0.3.0",
     "@opentui/react": "^0.3.0",
     "@types/node": "^26.0.1",
     "@types/react": "^19.2.17",
+    "eventsource-parser": "^4.1.0",
     "hono": "4.12.12",
     "opentui-spinner": "^0.0.7",
+    "pretty-ms": "^9.3.1",
     "react": "^19.2.6",
     "react-router": "^7.17.0",
     "zod": "^4.5.4"
