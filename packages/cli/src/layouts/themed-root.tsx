@@ -1,16 +1,21 @@
-import { type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { useTheme } from "../providers/theme";
 
-type props = {
+type Props = {
   children: ReactNode;
 };
 
-export function ThemedRoot({ children }: props) {
+export function ThemedRoot({ children }: Props) {
   const { colors } = useTheme();
 
   return (
-    <box backgroundColor={colors.background} width="100%" height="100%">
+    <box 
+      backgroundColor={colors.background} 
+      width="100%" 
+      height="100%" 
+      flexGrow={1}
+    >
       {children}
     </box>
   );
-}
+};
