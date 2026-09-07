@@ -7,7 +7,7 @@
     "dev": "bun run --watch src/index.tsx"
   },
   "devDependencies": {
-    "@types/bun": "latest",
+    "@types/bun": "^1.4.1",
     "@agentforge/server": "workspace:*"
   },
   "peerDependencies": {
@@ -23,6 +23,7 @@
     "date-fns": "^4.4.0",
     "eventsource-parser": "^4.1.0",
     "hono": "4.12.12",
+    "open": "^11.0.2",
     "opentui-spinner": "^0.0.7",
     "pretty-ms": "^9.3.1",
     "react": "^19.2.6",
